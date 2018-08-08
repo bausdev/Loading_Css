@@ -1,0 +1,120 @@
+/* CSS LOADING DESIGN */
+/* A work in progress, but I want to make this into a usable loading screen */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 2px;
+  padding: 5px;
+}
+.grid-container>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+.top-left {
+	 background: red;
+    top:0px;
+    left: 0px;
+    -webkit-animation: mymove-tl 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove-tl 5s infinite;
+}
+.top-right {
+	 background: blue;
+    top: 0px;
+    left: 100px;
+    -webkit-animation: mymove-tr 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove-tr 5s infinite;
+}
+.bottom-right {
+	 background: yellow;
+    top: 100px;
+    left: 100px;
+    -webkit-animation: mymove-br 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove-br 5s infinite;
+}
+.bottom-left {
+	 background: green;
+    top:100px ;
+    left:0px;
+    -webkit-animation: mymove-bl 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove-bl 5s infinite;
+}
+
+/* Circle Starts on Red */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove-tl {
+    0%   {top: 0px; left: 0px; background: red;}
+    25%  {top: 0px; left: 100px; background: blue;}
+    50%  {top: 100px; left: 100px; background: yellow;}
+    75%  {top: 100px; left: 0px; background: green;}
+    100% {top: 0px; left: 0px; background: red;}
+}
+/* Standard syntax */
+@keyframes mymove-tl {
+    0%   {top: 0px; left: 0px; background: red;}
+    25%  {top: 0px; left: 100px; background: blue;}
+    50%  {top: 100px; left: 100px; background: yellow;}
+    75%  {top: 100px; left: 0px; background: green;}
+    100% {top: 0px; left: 0px; background: red;}
+}
+/* Red Circle Ends */
+
+/* Cicle Starts on Blue */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove-tr {
+    0%   {top: 0px; left: 100px; background: blue;}
+    25%  {top: 100px; left: 100px; background: yellow;}
+    50%  {top: 100px; left: 0px; background: green;}
+    75%  {top: 0px; left: 0px; background: red;}
+    100% {top: 0px; left: 100px; background: red;}
+}
+/* Standard syntax */
+@keyframes mymove-tr {
+    0%   {top: 0px; left: 100px; background: blue;}
+    25%  {top: 100px; left: 100px; background: yellow;}
+    50%  {top: 100px; left: 0px; background: green;}
+    75%  {top: 0px; left: 0px; background: red;}
+    100% {top: 0px; left: 100px; background: red;}
+}
+/* Blue Circle Ends*/
+
+/* Cicle Starts on Yellow */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove-br {
+    0%   {top: 100px; left: 100px; background: yellow;}
+    25%  {top: 100px; left: 0px; background: green;}
+    50%  {top: 0px; left: 0px; background: red;}
+    75%  {top: 0px; left: 100px; background: red;}
+    100% {top: 100px; left: 100px; background: blue;}
+}
+/* Standard syntax */
+@keyframes mymove-br {
+    0%   {top: 100px; left: 100px; background: yellow;}
+    25%  {top: 100px; left: 0px; background: green;}
+    50%  {top: 0px; left: 0px; background: red;}
+    75%  {top: 0px; left: 100px; background: red;}
+    100% {top: 100px; left: 100px; background: blue;}
+}
+/* Yellow Circle Ends*/
+
+/* Cicle Starts on Green */
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove-bl {
+    0%   {top: 100px !important; left: 0px; background: green;}
+    25%  {top: 0px; left: 0px; background: red;}
+    50%  {top: 0px; left: 100px; background: red;}
+    75%  {top: 100px; left: 100px; background: blue;}
+    100% {top: 100px; left: 0px; background: yellow;}
+}
+/* Standard syntax */
+@keyframes mymove-bl {
+    0%   {top: 100px !important; left: 0px; background: green;}
+    25%  {top: 0px; left: 0px; background: red; }
+    50%  {top: 0px; left: 100px; background: red;}
+    75%  {top: 100px; left: 100px; background: blue;}
+    100% {top: 100px; left: 0px; background: yellow;}
+}
+/* Green Circle Ends*/
