@@ -1,6 +1,9 @@
 /* CSS LOADING DESIGN */
 /* A work in progress, but I want to make this into a usable loading screen */
 
+#loading {
+    grid-auto-flow: column;
+}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
